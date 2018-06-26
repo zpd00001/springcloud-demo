@@ -1,0 +1,13 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: springcloud-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8762/eureka
+    # begin 默认情况下，该服务注册中心也会将自己作为客户端来尝试注册它自己，但是会报错- -，拒绝链接等等，所以我们需要禁用它的客户端注册行为
+    fetch-registry: false
+    register-with-eureka: false
+    # end =========
